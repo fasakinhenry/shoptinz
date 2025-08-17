@@ -5,13 +5,13 @@ import Button from '@/components/ui/button';
 const TopBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigations = [
-    { to: '/features', title: 'Features' },
-    { to: '/why-trackit', title: 'Why Trackit' },
-    { to: '/get-started', title: 'Get Started' }
+    { to: '/marketplace', title: 'Marketplace' },
+    { to: '/buyers', title: 'Buyers' },
+    { to: '/affiliates', title: 'Affiliates' },
   ];
 
   return (
-    <header className='w-full flex justify-center'>
+    <header className='w-screen flex justify-center'>
       <div className='container flex justify-between items-center'>
         <nav>
           {navigations.map((nav) => (
@@ -21,13 +21,9 @@ const TopBar = () => {
           ))}
         </nav>
         <div className='font-bold text-2xl'>Trackit</div>
-        <div className='flex space-x-4 gap-2'>
-          <Button variant='primary'>
-            Sign In
-          </Button>
-          <Button variant='secondary'>
-            Sign Up
-          </Button>
+        <div className='space-x-4'>
+          <Button variant='primary'>Sign In</Button>
+          <Button variant='secondary'>Sign Up</Button>
         </div>
       </div>
     </header>
