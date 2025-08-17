@@ -1,7 +1,15 @@
+import { BrowserRouter, Routes, Route } from 'react-router';
+import LandingPage from '@/routes/landingPage';
 import './index.css';
 
 const App = () => {
-  return <div className='text-2xl font-bold'>App</div>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<LandingPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 };
 
 export default App;

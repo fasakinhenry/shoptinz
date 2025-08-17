@@ -1,4 +1,5 @@
-import Button from '@components/button';
+
+import Button from '../../ui/button';
 import './hero.css';
 
 const Hero = () => {
