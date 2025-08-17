@@ -21,7 +21,7 @@ const sizeStyles = {
 export default function Button({
   children,
   variant = 'primary',
-  size = 'md',
+  size = 'sm',
   isLoading = false,
   disabled = false,
   leftIcon,
