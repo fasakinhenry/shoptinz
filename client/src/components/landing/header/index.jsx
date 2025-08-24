@@ -16,7 +16,7 @@ const Header = () => {
     <header className='w-screen flex justify-center py-4'>
       <div className='container flex justify-between items-center px-4'>
         {/* Desktop Nav */}
-        <nav className='hidden md:flex space-x-6'>
+        <nav className='hidden md:flex space-x-6 text-gray-600'>
           {navigations.map((nav) => (
             <Link
               key={nav.to}
@@ -29,7 +29,7 @@ const Header = () => {
         </nav>
 
         {/* Logo */}
-        <div className='font-bold text-2xl'>Trackit</div>
+        <div className='font-bold text-2xl'>Shoptinz</div>
 
         {/* Desktop Buttons */}
         <div className='hidden md:flex space-x-4'>
