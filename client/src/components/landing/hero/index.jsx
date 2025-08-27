@@ -4,7 +4,7 @@ import '@components/landing/hero/hero.css';
 const Hero = () => {
   return (
     <section className='relative pt-16 text-center md:rounded-xl overflow-clip w-full max-w-7xl mx-auto'>
-      <div
+      {/* <div
         className='hero-gradient absolute inset-0'
         style={{
           background:
@@ -12,15 +12,16 @@ const Hero = () => {
           borderRadius: '16px',
           zIndex: 0,
         }}
-      />
+      /> */}
       <div className='relative z-10 px-4'>
-        <h1 className='text-xl font-medium mb-4 text-black sm:text-3xl'>
+        <h1 className='text-xl mb-4 text-black sm:text-5xl md:text-5xl font-bold text-center'>
           Easily manage, track & find your affiliate partners.
         </h1>
-        <p className='text-md mb-6 sm:text-sm'>
-          ProfitPulse helps businesses, manage, track, and find affiliates.
+        <p className='text-md mb-6 text-center'>
+          Shoptinz is the next affiliate marketing platform that allows users of
+          all kinds to manage their ecommerce dealings.
         </p>
-        <div className='space-x-4 mb-8 sm:space-x-6'>
+        <div className='space-x-4 my-10 sm:space-x-6'>
           <Button variant='primary' size='md'>
             Get Started
           </Button>
