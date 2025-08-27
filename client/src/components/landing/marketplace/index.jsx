@@ -9,7 +9,7 @@ const Marketplace = () => {
       <p className='mb-6'>
         Grow your MRR, don’t worry about finding affiliates, let us place.
       </p>
-      <div className='flex flex-col justify-around items-center w-full md:flex-row gap-4'>
+      <div className='flex flex-col justify-center items-center w-full md:flex-row gap-4 md:gap-8'>
         {/* Marketplace card */}
         <div className='market-card bg-white rounded-xl shadow max-w-80 p-5 flex flex-col text-left'>
           <header className='flex items-center h-full mb-3'>
