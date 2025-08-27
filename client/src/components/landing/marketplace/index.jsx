@@ -9,27 +9,54 @@ const Marketplace = () => {
       <p className='mb-6'>
         Grow your MRR, don’t worry about finding affiliates, let us place.
       </p>
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-        <div className='border p-4 rounded-lg'>
-          <h3>Zubitel.it</h3>
-          <p>Established in 2018, Zubitel.it is a well...</p>
-          <Button variant='primary' size='sm'>
-            View Program
-          </Button>
+      <div className='flex flex-col justify-around items-center w-full md:flex-row gap-4'>
+        {/* Marketplace card */}
+        <div className='market-card bg-white rounded-xl shadow max-w-80 p-5 flex flex-col text-left'>
+          <header className='flex items-center h-full mb-3'>
+            <div className='w-10 h-10 bg-blue-900 mr-8 mb-3 rounded-xl'></div>
+            <h3 className='text-center font-bold'>Zubtitle</h3>
+          </header>
+          <div className='tag-container flex gap-3 mb-4'>
+            <div className='tag p-1 px-3 border-2 border-gray-200 text-sm rounded-xl'>Marketing</div>
+            <div className='tag p-1 px-3 border-2 border-gray-200 text-sm rounded-xl'>Software</div>
+          </div>
+          <p>
+            Established in 2018, zubtitle is a wweb-based application designed
+            to automatically generate
+          </p>
+          <div className='cta-btn w-full border-2 border-gray-400 p-2 flex justify-center items-center rounded-md mt-6 font-bold text-gray-600'>View Program</div>
         </div>
-        <div className='border p-4 rounded-lg'>
-          <h3>Zone-12</h3>
-          <p>Zone-12 is a prominent online retailer that...</p>
-          <Button variant='primary' size='sm'>
-            View Program
-          </Button>
+        {/* Marketplace card */}
+        <div className='market-card bg-white rounded-xl shadow max-w-80 p-5 flex flex-col text-left'>
+          <header className='flex items-center h-full mb-3'>
+            <div className='w-10 h-10 bg-blue-900 mr-8 mb-3 rounded-xl'></div>
+            <h3 className='text-center font-bold'>Zubtitle</h3>
+          </header>
+          <div className='tag-container flex gap-3 mb-4'>
+            <div className='tag p-1 px-3 border-2 border-gray-200 text-sm rounded-xl'>Marketing</div>
+            <div className='tag p-1 px-3 border-2 border-gray-200 text-sm rounded-xl'>Software</div>
+          </div>
+          <p>
+            Established in 2018, zubtitle is a wweb-based application designed
+            to automatically generate
+          </p>
+          <div className='cta-btn w-full border-2 border-gray-400 p-2 flex justify-center items-center rounded-md mt-6 font-bold text-gray-600'>View Program</div>
         </div>
-        <div className='border p-4 rounded-lg'>
-          <h3>ZooVpn</h3>
-          <p>With ZooVpn, you have access to a variety...</p>
-          <Button variant='primary' size='sm'>
-            View Program
-          </Button>
+        {/* Marketplace card */}
+        <div className='market-card bg-white rounded-xl shadow max-w-80 p-5 flex flex-col text-left'>
+          <header className='flex items-center h-full mb-3'>
+            <div className='w-10 h-10 bg-blue-900 mr-8 mb-3 rounded-xl'></div>
+            <h3 className='text-center font-bold'>Zubtitle</h3>
+          </header>
+          <div className='tag-container flex gap-3 mb-4'>
+            <div className='tag p-1 px-3 border-2 border-gray-200 text-sm rounded-xl'>Marketing</div>
+            <div className='tag p-1 px-3 border-2 border-gray-200 text-sm rounded-xl'>Software</div>
+          </div>
+          <p>
+            Established in 2018, zubtitle is a wweb-based application designed
+            to automatically generate
+          </p>
+          <div className='cta-btn w-full border-2 border-gray-400 p-2 flex justify-center items-center rounded-md mt-6 font-bold text-gray-600'>View Program</div>
         </div>
       </div>
       <Button variant='primary' size='md' className='mt-6'>
