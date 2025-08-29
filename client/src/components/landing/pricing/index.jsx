@@ -2,7 +2,7 @@ import Button from '@components/ui/button';
 
 const Pricing = () => {
   return (
-    <section className="py-16 text-center">
+    <section className="py-8 text-center">
       <h2 className="text-3xl font-bold mb-8">Suitable pricing for you</h2>
       <p className="mb-6">Choose the plan that’s right for you. Or start our 7-day free trial</p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
