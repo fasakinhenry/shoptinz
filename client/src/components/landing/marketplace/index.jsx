@@ -28,7 +28,7 @@ const Marketplace = () => {
             Established in 2018, zubtitle is a wweb-based application designed
             to automatically generate
           </p>
-          <div className='cta-btn w-full border-2 border-gray-400 p-2 flex justify-center items-center rounded-md mt-6 font-bold text-gray-600'>
+          <div className='cta-btn w-full border-2 border-gray-400 p-2 flex justify-center items-center rounded-md mt-6 font-bold text-gray-600 cursor-pointer'>
             View Program
           </div>
         </div>
@@ -50,7 +50,7 @@ const Marketplace = () => {
             Established in 2018, zubtitle is a wweb-based application designed
             to automatically generate
           </p>
-          <div className='cta-btn w-full border-2 border-gray-400 p-2 flex justify-center items-center rounded-md mt-6 font-bold text-gray-600'>
+          <div className='cta-btn w-full border-2 border-gray-400 p-2 flex justify-center items-center rounded-md mt-6 font-bold text-gray-600 cursor-pointer'>
             View Program
           </div>
         </div>
@@ -72,7 +72,7 @@ const Marketplace = () => {
             Established in 2018, zubtitle is a wweb-based application designed
             to automatically generate
           </p>
-          <div className='cta-btn w-full border-2 border-gray-400 p-2 flex justify-center items-center rounded-md mt-6 font-bold text-gray-600'>
+          <div className='cta-btn w-full border-2 border-gray-400 p-2 flex justify-center items-center rounded-md mt-6 font-bold text-gray-600 cursor-pointer'>
             View Program
           </div>
         </div>

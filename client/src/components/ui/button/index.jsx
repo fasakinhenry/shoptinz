@@ -4,7 +4,9 @@ const variantStyles = {
   primary:
     'bg-blue-500 cursor-pointer text-white border-2 border-transparent hover:bg-blue-600 disabled:bg-blue-300 disabled:cursor-not-allowed',
   secondary:
-    'bg-white cursor-pointer text-green-600 border-2 border-green-600 hover:bg-green-50 disabled:bg-gray-200 disabled:cursor-not-allowed',
+    'bg-white cursor-pointer text-green-600 border-2 border-blue-600 hover:bg-blue-50 disabled:bg-gray-200 disabled:cursor-not-allowed',
+  tertiary:
+    'bg-none cursor-pointer text-white border-2 border-white hover:bg-green-50 hover:text-blue-600 disabled:bg-gray-200 disabled:cursor-not-allowed',
   success:
     'bg-green-500 cursor-pointer text-white hover:bg-green-600 disabled:bg-green-300 disabled:cursor-not-allowed',
   error:
