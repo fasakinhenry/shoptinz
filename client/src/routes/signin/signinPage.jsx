@@ -203,7 +203,7 @@ const Signin = () => {
             {/* Form Inputs */}
             <div>
               <label className='block text-sm font-medium text-gray-700 mb-2'>
-                {loginMethod === 'email' ? 'Email' : 'Phone Number'}*
+                {loginMethod === 'email' ? 'Email' : 'Phone Number'} *
               </label>
               <div className='relative'>
                 {loginMethod === 'email' ? (
@@ -229,7 +229,7 @@ const Signin = () => {
 
             <div>
               <label className='block text-sm font-medium text-gray-700 mb-2'>
-                Password*
+                Password *
               </label>
               <div className='relative'>
                 <Lock className='absolute left-3 top-3.5 w-5 h-5 text-gray-400' />
