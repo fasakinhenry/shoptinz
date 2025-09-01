@@ -92,8 +92,8 @@ const Signin = () => {
 
   return (
     <div className='min-h-screen flex bg-gray-50 lg:bg-white'>
-      {/* Left Sidebar - Hidden on mobile, fixed height */}
-      <div className='hidden lg:flex lg:w-1/3 bg-gray-50 p-8 flex-col h-screen'>
+      {/* Left Sidebar - Fixed on desktop, vertically spaced like Signup */}
+      <div className='hidden lg:flex lg:w-1/3 bg-gray-50 p-8 h-screen fixed top-0 left-0 flex-col justify-between'>
         {/* Logo */}
         <div className='flex items-center mb-12'>
           <div className='w-8 ml-2 h-8 bg-blue-600 rounded flex items-center justify-center mr-3'>
@@ -102,7 +102,7 @@ const Signin = () => {
           <span className='text-xl font-semibold'>Shoptinz</span>
         </div>
 
-        {/* Welcome Message */}
+        {/* Welcome Message - Centered vertically */}
         <div className='flex-1 flex flex-col justify-center'>
           <h2 className='text-3xl font-semibold text-gray-900 mb-4'>
             Welcome to Shoptinz!
@@ -114,37 +114,39 @@ const Signin = () => {
         </div>
 
         {/* Bottom Navigation */}
-        <div className='flex justify-between items-center pt-8 border-t border-gray-200'>
-          <button
-            onClick={handleBackToHome}
-            className='flex items-center text-gray-600 hover:text-blue-800 transition-colors cursor-pointer'
-          >
-            <svg
-              className='w-4 h-4 mr-2'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
+        <div className='pt-8 border-t border-gray-200'>
+          <div className='flex justify-between items-center'>
+            <button
+              onClick={handleBackToHome}
+              className='flex items-center text-gray-600 hover:text-blue-800 transition-colors cursor-pointer'
             >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M15 19l-7-7 7-7'
-              />
-            </svg>
-            Back to home
-          </button>
-          <button
-            onClick={handleSignup}
-            className='text-gray-600 hover:text-blue-800 transition-colors cursor-pointer'
-          >
-            Sign up
-          </button>
+              <svg
+                className='w-4 h-4 mr-2'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={2}
+                  d='M15 19l-7-7 7-7'
+                />
+              </svg>
+              Back to home
+            </button>
+            <button
+              onClick={handleSignup}
+              className='text-gray-600 hover:text-blue-800 transition-colors cursor-pointer'
+            >
+              Sign up
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Right Content */}
-      <div className='flex-1 bg-white p-6 sm:p-8 lg:p-12 flex flex-col justify-center min-h-screen'>
+      {/* Right Content - Scrollable */}
+      <div className='flex-1 lg:ml-[33.33%] bg-white p-6 sm:p-8 lg:p-12 flex flex-col justify-center min-h-screen overflow-y-auto'>
         <div className='max-w-md mx-auto w-full'>
           {/* Mobile Logo */}
           <div className='lg:hidden flex items-center justify-center mb-8'>
@@ -173,13 +175,13 @@ const Signin = () => {
 
           <div className='space-y-6'>
             {/* Email/Phone Tabs */}
-            <div className='flex border border-gray-300 rounded-lg overflow-hidden'>
+            <div className='flex rounded-lg p-1 border border-gray-300'>
               <button
                 onClick={() => setLoginMethod('email')}
-                className={`flex-1 py-3 text-sm font-medium transition-colors cursor-pointer flex items-center justify-center gap-2 ${
+                className={`flex-1 py-2 text-sm font-medium transition-colors cursor-pointer flex items-center justify-center gap-2 ${
                   loginMethod === 'email'
-                    ? 'bg-blue-100 text-blue-600'
-                    : 'bg-white text-gray-600 hover:bg-gray-50'
+                    ? 'bg-blue-100 text-blue-600 rounded-md'
+                    : 'text-gray-600 hover:text-blue-600'
                 }`}
               >
                 <Mail className='w-4 h-4' />
@@ -187,10 +189,10 @@ const Signin = () => {
               </button>
               <button
                 onClick={() => setLoginMethod('phone')}
-                className={`flex-1 py-3 text-sm font-medium transition-colors cursor-pointer flex items-center justify-center gap-2 ${
+                className={`flex-1 py-2 text-sm font-medium transition-colors cursor-pointer flex items-center justify-center gap-2 ${
                   loginMethod === 'phone'
-                    ? 'bg-blue-100 text-blue-600'
-                    : 'bg-white text-gray-600 hover:bg-gray-50'
+                    ? 'bg-blue-100 text-blue-600 rounded-md'
+                    : 'text-gray-600 hover:text-blue-600'
                 }`}
               >
                 <Phone className='w-4 h-4' />
@@ -257,7 +259,6 @@ const Signin = () => {
               disabled={isLoading}
               variant='primary'
               className='w-full'
-              size='md'
             >
               {isLoading ? 'Loading...' : 'Sign In'}
             </Button>
@@ -275,11 +276,11 @@ const Signin = () => {
 
             {/* Google Sign-in Button */}
             <Button
-              variant='tertiary'
+              variant='secondary'
               onClick={handleGoogleSignin}
               disabled={isLoading}
-              leftIcon={<Chrome className='w-5 h-5' />}
-              className='w-full'
+              leftIcon={<Chrome className='w-5 h-5 text-gray-600' />}
+              className='w-full text-gray-600 hover:text-gray-600 border-gray-300 hover:bg-gray-50'
             >
               Sign in with Google
             </Button>
