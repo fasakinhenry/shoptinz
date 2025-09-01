@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from 'react-router';
 import LandingPage from '@/routes/landingPage';
 import './index.css';
-import AuthPage from './routes/authPage/authPage';
+import Signup from './routes/signup/signupPage';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<LandingPage />} />
-        <Route path='/auth' element={<AuthPage />} />
+        <Route path='/signup' element={<Signup />} />
       </Routes>
     </BrowserRouter>
   );
