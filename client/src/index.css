@@ -3,12 +3,12 @@
 
 @font-face {
   font-family: 'Aeonik Pro';
-  src: url(../public/fonts/AeonikProTRIAL-Regular.otf);
+  src: url(../fonts/AeonikProTRIAL-Regular.otf);
 }
 
 @font-face {
   font-family: 'Aeonik Pro';
-  src: url(../public/fonts/AeonikProTRIAL-Bold.otf);
+  src: url(../fonts/AeonikProTRIAL-Bold.otf);
   font-weight: bold;
 }
 
