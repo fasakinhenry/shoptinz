@@ -74,10 +74,20 @@ export default function Button({
   );
 
   if (href) {
+    // Force text color for primary and secondary variants
+    const forcedStyle = {};
+    if (variant === 'primary') {
+      forcedStyle.color = '#fff';
+    }
+    if (variant === 'secondary') {
+      forcedStyle.color = '#2563eb'; // Tailwind blue-600
+    }
+
     return (
       <Link
         to={href}
         className={baseClasses}
+        style={forcedStyle}
         aria-disabled={isLoading || disabled}
         onClick={(e) => {
           if (isLoading || disabled) e.preventDefault();

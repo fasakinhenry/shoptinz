@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react'; // icons
+import { Menu, X } from 'lucide-react';
 import Button from '@/components/ui/button';
 
 const Header = () => {
@@ -21,7 +21,7 @@ const Header = () => {
             <Link
               key={nav.to}
               to={nav.to}
-              className='block hover:text-blue-600'
+              className='block hover:text-blue-600 cursor-pointer'
             >
               {nav.title}
             </Link>
@@ -33,17 +33,27 @@ const Header = () => {
 
         {/* Desktop Buttons */}
         <div className='hidden md:flex space-x-4'>
-          <Button variant='secondary' size='sm'>
+          <Button
+            variant='secondary'
+            size='sm'
+            href='/signup'
+            className='text-blue-600 hover:text-blue-600'
+          >
             Sign Up
           </Button>
-          <Button variant='primary' size='sm'>
+          <Button
+            variant='primary'
+            size='sm'
+            href='/signin'
+            className='text-white hover:text-white'
+          >
             Sign In
           </Button>
         </div>
 
         {/* Mobile Hamburger */}
         <button
-          className='md:hidden p-2 rounded hover:bg-gray-100'
+          className='md:hidden p-2 rounded hover:bg-gray-100 cursor-pointer'
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -58,7 +68,7 @@ const Header = () => {
               <Link
                 key={nav.to}
                 to={nav.to}
-                className='block hover:text-blue-600'
+                className='block hover:text-blue-600 cursor-pointer'
                 onClick={() => setMenuOpen(false)}
               >
                 {nav.title}
@@ -66,10 +76,18 @@ const Header = () => {
             ))}
 
             <div className='flex flex-col space-y-2 pt-4'>
-              <Button variant='secondary' className='w-full'>
+              <Button
+                variant='secondary'
+                className='w-full text-blue-600 hover:text-blue-600'
+                href='/signup'
+              >
                 Sign Up
               </Button>
-              <Button variant='primary' className='w-full'>
+              <Button
+                variant='primary'
+                className='w-full text-white hover:text-white'
+                href='/signin'
+              >
                 Sign In
               </Button>
             </div>

@@ -91,9 +91,9 @@ const Signin = () => {
   };
 
   return (
-    <div className='min-h-screen flex overflow-hidden bg-gray-50 lg:bg-white'>
-      {/* Left Sidebar - Hidden on mobile */}
-      <div className='hidden lg:flex lg:w-1/3 bg-gray-50 p-8 flex-col relative'>
+    <div className='min-h-screen flex bg-gray-50 lg:bg-white'>
+      {/* Left Sidebar - Hidden on mobile, fixed height */}
+      <div className='hidden lg:flex lg:w-1/3 bg-gray-50 p-8 flex-col h-screen'>
         {/* Logo */}
         <div className='flex items-center mb-12'>
           <div className='w-8 ml-2 h-8 bg-blue-600 rounded flex items-center justify-center mr-3'>
@@ -117,7 +117,7 @@ const Signin = () => {
         <div className='flex justify-between items-center pt-8 border-t border-gray-200'>
           <button
             onClick={handleBackToHome}
-            className='flex items-center text-gray-600 hover:text-blue-800 transition-colors'
+            className='flex items-center text-gray-600 hover:text-blue-800 transition-colors cursor-pointer'
           >
             <svg
               className='w-4 h-4 mr-2'
@@ -136,7 +136,7 @@ const Signin = () => {
           </button>
           <button
             onClick={handleSignup}
-            className='text-gray-600 hover:text-blue-800 transition-colors'
+            className='text-gray-600 hover:text-blue-800 transition-colors cursor-pointer'
           >
             Sign up
           </button>
@@ -172,50 +172,28 @@ const Signin = () => {
           </div>
 
           <div className='space-y-6'>
-            {/* Google Sign-in Button */}
-            <Button
-              variant='tertiary'
-              onClick={handleGoogleSignin}
-              disabled={isLoading}
-              leftIcon={<Chrome className='w-5 h-5' />}
-              className='w-full'
-            >
-              Sign in with Google
-            </Button>
-
-            <div className='relative my-6'>
-              <div className='absolute inset-0 flex items-center'>
-                <div className='w-full border-t border-gray-300'></div>
-              </div>
-              <div className='relative flex justify-center text-sm'>
-                <span className='px-2 bg-white text-gray-500'>
-                  Or continue with
-                </span>
-              </div>
-            </div>
-
-            {/* Toggle Buttons */}
-            <div className='flex justify-center space-x-4'>
+            {/* Email/Phone Tabs */}
+            <div className='flex border border-gray-300 rounded-lg overflow-hidden'>
               <button
                 onClick={() => setLoginMethod('email')}
-                className={`flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                className={`flex-1 py-3 text-sm font-medium transition-colors cursor-pointer flex items-center justify-center gap-2 ${
                   loginMethod === 'email'
                     ? 'bg-blue-100 text-blue-600'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    : 'bg-white text-gray-600 hover:bg-gray-50'
                 }`}
               >
-                <Mail className='w-4 h-4 mr-2' />
+                <Mail className='w-4 h-4' />
                 Email
               </button>
               <button
                 onClick={() => setLoginMethod('phone')}
-                className={`flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                className={`flex-1 py-3 text-sm font-medium transition-colors cursor-pointer flex items-center justify-center gap-2 ${
                   loginMethod === 'phone'
                     ? 'bg-blue-100 text-blue-600'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    : 'bg-white text-gray-600 hover:bg-gray-50'
                 }`}
               >
-                <Phone className='w-4 h-4 mr-2' />
+                <Phone className='w-4 h-4' />
                 Phone
               </button>
             </div>
@@ -268,7 +246,7 @@ const Signin = () => {
             <div className='text-right'>
               <button
                 onClick={handleForgotPassword}
-                className='text-sm text-blue-600 hover:text-blue-800 font-medium'
+                className='text-sm text-blue-600 hover:text-blue-800 font-medium cursor-pointer'
               >
                 Forgot password?
               </button>
@@ -279,8 +257,31 @@ const Signin = () => {
               disabled={isLoading}
               variant='primary'
               className='w-full'
+              size='md'
             >
               {isLoading ? 'Loading...' : 'Sign In'}
+            </Button>
+
+            <div className='relative my-6'>
+              <div className='absolute inset-0 flex items-center'>
+                <div className='w-full border-t border-gray-300'></div>
+              </div>
+              <div className='relative flex justify-center text-sm'>
+                <span className='px-2 bg-white text-gray-500'>
+                  Or continue with
+                </span>
+              </div>
+            </div>
+
+            {/* Google Sign-in Button */}
+            <Button
+              variant='tertiary'
+              onClick={handleGoogleSignin}
+              disabled={isLoading}
+              leftIcon={<Chrome className='w-5 h-5' />}
+              className='w-full'
+            >
+              Sign in with Google
             </Button>
           </div>
 
@@ -288,14 +289,14 @@ const Signin = () => {
           <div className='mt-6 flex justify-center space-x-6 text-sm lg:hidden'>
             <button
               onClick={handleBackToHome}
-              className='text-gray-600 hover:text-blue-800 transition-colors'
+              className='text-gray-600 hover:text-blue-800 transition-colors cursor-pointer'
             >
               Back to home
             </button>
             <span className='text-gray-300'>|</span>
             <button
               onClick={handleSignup}
-              className='text-gray-600 hover:text-blue-800 transition-colors'
+              className='text-gray-600 hover:text-blue-800 transition-colors cursor-pointer'
             >
               Sign up
             </button>
