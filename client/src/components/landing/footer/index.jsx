@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className='py-8 text-center text-gray-500'>
-      <div className='text-4xl font-bold mb-4'>trackit.</div>
+      <div className='text-4xl font-bold mb-4'>Shoptinz</div>
       <div className='space-x-4'>
         <a href='#'>Product</a>
         <a href='#'>Features</a>
